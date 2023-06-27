@@ -8,6 +8,7 @@ import Login from "./components/Login";
 import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import { useSelector } from "react-redux";
+import Welcome from "./components/Welcome";
 
 function App() {
   const { authToken } = useSelector((state) => state.auth);
@@ -18,8 +19,9 @@ function App() {
           <Route path="/">
             <Route
               index
-              element={authToken ? <Home /> : <Navigate to="login" />}
+              element={authToken ? <Home /> : <Navigate to="welcome" />}
             />
+            <Route path="welcome" element={<Welcome />} />
             <Route path="register" element={<Registration />} />
             <Route path="login" element={<Login />} />
             <Route path="forgotPassword" element={<ForgotPassword />} />

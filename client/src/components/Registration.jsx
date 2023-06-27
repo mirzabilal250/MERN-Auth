@@ -60,8 +60,8 @@ const Registration = () => {
       placeholder: "Password",
       label: "Password",
       required: true,
-      pattern: "^[\\w]{6,}$",
-      errormessage: "Password should be atleast 6 characters",
+      pattern: "^(?=.*\d)(?=.*[!@#$%^&*]).{8,15}$",
+      errormessage: "Passwords must have 8 to 15 characters and contains at least 1 digit & 1 special character",
     },
     {
       id: 4,
