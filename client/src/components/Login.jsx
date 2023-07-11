@@ -52,8 +52,8 @@ const Login = () => {
       placeholder: "Password",
       label: "Password",
       required: true,
-      pattern: "^[\\w]{6,}$",
-      errormessage: "Password should be atleast 6 characters",
+      pattern: "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}",
+      errormessage: "Passwords must have 8 to 15 characters and contains at least 1 digit & 1 special character",
     },
   ];
 

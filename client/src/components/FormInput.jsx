@@ -19,6 +19,7 @@ const FormInput = (props) => {
         onChange={props.onChange}
         onBlur={handleFocus}
         focused={focused.toString()}
+        autoComplete={props.autocomplete}
         {...inputProps}
       />
       <span>{props.errormessage}</span>

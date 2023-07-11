@@ -18,6 +18,14 @@ const userSchema = mongoose.Schema(
         "Please provide a valid email",
       ],
     },
+    education: {
+      type: String,
+      required: [true, "Please provide an education"],
+    },
+    age: {
+      type: String,
+      required: [true, "Please provide an age"],
+    },
     password: {
       type: String,
       required: [true, "Please provide a password"],

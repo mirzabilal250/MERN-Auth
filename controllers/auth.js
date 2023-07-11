@@ -3,11 +3,13 @@ const User = require("../models/User");
 const sendEmail = require("../utils/sendEmail");
 
 const register = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { username, email, education, age, password } = req.body;
 
-  if (!username || !email || !password) {
+  console.log(`Username is : ${username}, Email is : ${email}, Education is : ${education}, Age is : ${age}, and Password is : ${password}`);
+
+  if (!username || !email || !password || !education || !age) {
     res.status(400);
-    return next(new Error("Please provide username, email and password"));
+    return next(new Error("Please provide username, email, education, age and password"));
   }
 
   // Check if user already exists
@@ -22,6 +24,8 @@ const register = async (req, res, next) => {
     const user = await User.create({
       username,
       email,
+      education,
+      age,
       password,
     });
     generateToken(user, 201, res);
