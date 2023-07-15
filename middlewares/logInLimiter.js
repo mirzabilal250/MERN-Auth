@@ -10,7 +10,8 @@ const logInLimiter=rateLimit({
     },
     handler:(req,res,next,options)=>{
        
-        res.status(options.statusCode).send(options.message)
+        res.status(options.statusCode);
+        return next(new Error("Too many login attempts from this IP please try again after 2 minutes"));
     },
     standardHeaders:true,//return ratelimit info into RateLimit-* headers
     legacyHeaders:false //disable X-RateLimit-* headers

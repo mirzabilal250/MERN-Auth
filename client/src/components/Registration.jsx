@@ -40,6 +40,7 @@ const Registration = () => {
       name: "username",
       type: "text",
       placeholder: "Username",
+      autocomplete: "off",
       // label: "Username",
       required: true,
       pattern: "^[\\w\\s]{3,}$",
@@ -50,6 +51,7 @@ const Registration = () => {
       name: "email",
       type: "email",
       placeholder: "Email",
+      autocomplete: "off",
       // label: "Email",
       required: true,
       pattern: "^\\w+([\\.-]?\\w+)*@\\w+([\\.-]?\\w+)*(\\.\\w{2,3})+$",
@@ -63,9 +65,10 @@ const Registration = () => {
       name: "password",
       type: "password",
       placeholder: "Password",
+      autocomplete: "off",
       // label: "Password",
       required: true,
-      pattern: "(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*_=+-]).{8,16}",
+      pattern: "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*]).{8,15}",
       errormessage: "Passwords must have 8 to 15 characters and contains at least 1 digit & 1 special character",
     },
     {
@@ -73,6 +76,7 @@ const Registration = () => {
       name: "confirmPassword",
       type: "password",
       placeholder: "Confirm Password",
+      autocomplete: "off",
       // label: "Confirm Password",
       required: true,
       pattern: values.password,
@@ -89,15 +93,6 @@ const Registration = () => {
       age,
       password,
     };
-
-    // const userData = {
-    //   username,
-    //   email,
-    //   password,
-    // };
-
-
-    console.log(userData);
 
     dispatch(register(userData));
   };
