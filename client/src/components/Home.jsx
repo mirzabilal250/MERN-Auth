@@ -11,7 +11,7 @@ const Home = () => {
 
   return (
     <div className="home">
-      <h1>Welcome to the MERN Advanced Authentication App</h1>
+      <h1>Welcome to the Advanced QAPAP-Authentication App</h1>
       <p>Thank you for testing my App.</p>
       <button onClick={logoutHandler}>Logout</button>
     </div>

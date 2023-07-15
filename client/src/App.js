@@ -9,6 +9,7 @@ import ForgotPassword from "./components/ForgotPassword";
 import ResetPassword from "./components/ResetPassword";
 import { useSelector } from "react-redux";
 import Welcome from "./components/Welcome";
+import RegistrationPhrase from "./components/RegistrationPhrase";
 
 function App() {
   const { authToken } = useSelector((state) => state.auth);
@@ -23,6 +24,7 @@ function App() {
             />
             <Route path="welcome" element={<Welcome />} />
             <Route path="register" element={<Registration />} />
+            <Route path="registerPhrase" element={<RegistrationPhrase />} />
             <Route path="login" element={<Login />} />
             <Route path="forgotPassword" element={<ForgotPassword />} />
             <Route

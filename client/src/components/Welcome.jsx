@@ -13,11 +13,18 @@ const Welcome = () => {
         Navigate("/login")
     }
 
+    const SignUpPhraseHandler = () => {
+      Navigate("/registerPhrase")
+  }
+
   return (
     <div className="home">
       <h1>Welcome to the QAPAP-Authentication Project</h1>
-      <button onClick={logInHandler}>Log-In</button>
+      <div id="loginSignupButtom">
+      <button id="loginButton" onClick={logInHandler}>Log-In</button>
       <button onClick={SignUpHandler}>Sign-Up</button>
+      </div>
+      <button onClick={SignUpPhraseHandler}>Sign-Up with Phrase</button>
     </div>
   );
 };
