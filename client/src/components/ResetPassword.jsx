@@ -90,6 +90,9 @@ const ResetPassword = () => {
         <span>
           Want to login? <Link to="/login">Login</Link>
         </span>
+        <span>
+          <Link to="/welcome">Back to Home Page</Link>
+        </span>
       </form>
     </div>
   );

@@ -52,7 +52,7 @@ const Login = () => {
       placeholder: "Password",
       label: "Password",
       required: true,
-      pattern: "",
+      pattern: "(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z]).{8,15}",
       errormessage: "Passwords must have 8 to 15 characters and contains at least 1 digit & 1 special character",
     },
   ];
@@ -92,6 +92,9 @@ const Login = () => {
         </span>
         <span>
           <Link to="/forgotPassword">Forgot password?</Link>
+        </span>
+        <span>
+          <Link to="/welcome">Back to Home Page</Link>
         </span>
       </form>
     </div>

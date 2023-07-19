@@ -147,6 +147,9 @@ const RegistrationPhrase = () => {
         <span>
           Already have an account? <Link to="/login">Login</Link>
         </span>
+        <span>
+          <Link to="/welcome">Back to Home Page</Link>
+        </span>
       </form>
     </div>
   );
